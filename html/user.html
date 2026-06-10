@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优品商城 - 个人中心</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <span>欢迎来到优品商城</span>
+                </div>
+                <div class="header-right">
+                    <a href="login.html" id="login-link">登录</a>
+                    <span>|</span>
+                    <a href="login.html" id="register-link">注册</a>
+                    <span>|</span>
+                    <a href="user.html" id="profile-link" style="display: none;">个人中心</a>
+                    <span id="user-name" style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../index.html">优品商城</a></h1>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索商品...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 个人中心内容 -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-content" id="profile-content">
+                <!-- 未登录状态 -->
+                <div class="not-login" id="not-login">
+                    <div class="login-prompt">
+                        <i class="fas fa-user-circle"></i>
+                        <p>请先登录</p>
+                        <a href="login.html" class="login-btn">立即登录</a>
+                    </div>
+                </div>
+                
+                <!-- 已登录状态 -->
+                <div class="logged-in" id="logged-in" style="display: none;">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail">
+                            <h2 id="user-name-display"></h2>
+                            <p id="user-email"></p>
+                            <p id="user-phone"></p>
+                        </div>
+                        <button id="logout-btn" class="logout-btn">退出登录</button>
+                    </div>
+                    
+                    <div class="profile-nav">
+                        <div class="nav-item" id="nav-orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>我的订单</span>
+                        </div>
+                        <div class="nav-item" id="nav-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>收货地址</span>
+                        </div>
+                        <div class="nav-item" id="nav-settings">
+                            <i class="fas fa-cog"></i>
+                            <span>账户设置</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 订单列表 -->
+                    <div class="orders-section" id="orders-section">
+                        <h3>我的订单</h3>
+                        <div class="orders-list" id="orders-list">
+                            <!-- 订单将通过JS动态加载 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>版权信息</h3>
+                    <p>学号：24215220235</p>
+                    <p>姓名：梁鸿毅</p>
+                    <p>&copy; 2024 优品商城 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+</html>

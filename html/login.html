@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优品商城 - 登录注册</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../index.html">优品商城</a></h1>
+                </div>
+                <div class="header-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 登录注册区域 -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-box">
+                <!-- 标签切换 -->
+                <div class="auth-tabs">
+                    <div class="tab active" id="login-tab">登录</div>
+                    <div class="tab" id="register-tab">注册</div>
+                </div>
+                
+                <!-- 错误信息 -->
+                <div class="error-messages"></div>
+                
+                <!-- 登录表单 -->
+                <form id="login-form" class="auth-form">
+                    <h2>用户登录</h2>
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" placeholder="请输入用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" placeholder="请输入密码">
+                    </div>
+                    <button type="submit" class="submit-btn">登录</button>
+                    <p class="auth-link">还没有账号？<a href="#" id="go-register">立即注册</a></p>
+                </form>
+                
+                <!-- 注册表单 -->
+                <form id="register-form" class="auth-form" style="display: none;">
+                    <h2>用户注册</h2>
+                    <div class="form-group">
+                        <label for="reg-username">用户名</label>
+                        <input type="text" id="reg-username" placeholder="请输入用户名（至少3位）">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">密码</label>
+                        <input type="password" id="reg-password" placeholder="请输入密码（至少6位）">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">确认密码</label>
+                        <input type="password" id="reg-confirm-password" placeholder="请再次输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">邮箱</label>
+                        <input type="email" id="reg-email" placeholder="请输入邮箱地址">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">手机号（选填）</label>
+                        <input type="tel" id="reg-phone" placeholder="请输入手机号码">
+                    </div>
+                    <button type="submit" class="submit-btn">注册</button>
+                    <p class="auth-link">已有账号？<a href="#" id="go-login">立即登录</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>版权信息</h3>
+                    <p>学号:24215220235</p>
+                    <p>姓名:梁鸿毅</p>
+                    <p>&copy; 2024 优品商城 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

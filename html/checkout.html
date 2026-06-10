@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优品商城 - 提交订单</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <span>欢迎来到优品商城</span>
+                </div>
+                <div class="header-right">
+                    <a href="login.html" id="login-link">登录</a>
+                    <span>|</span>
+                    <a href="login.html" id="register-link">注册</a>
+                    <span>|</span>
+                    <a href="user.html" id="profile-link" style="display: none;">个人中心</a>
+                    <span id="user-name" style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../index.html">优品商城</a></h1>
+                </div>
+                <div class="header-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 提交订单主内容 -->
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <div class="checkout-step active">
+                <div class="step-number">1</div>
+                <span class="step-text">确认订单</span>
+            </div>
+            <i class="fas fa-arrow-right"></i>
+            <div class="checkout-step">
+                <div class="step-number">2</div>
+                <span class="step-text">支付</span>
+            </div>
+            <i class="fas fa-arrow-right"></i>
+            <div class="checkout-step">
+                <div class="step-number">3</div>
+                <span class="step-text">完成</span>
+            </div>
+        </div>
+
+        <div class="checkout-main">
+            <div class="checkout-left">
+                <div class="checkout-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> 收货地址</h3>
+                    <div class="address-options" id="address-options"></div>
+                </div>
+
+                <div class="checkout-card">
+                    <h3><i class="fas fa-shopping-bag"></i> 商品清单</h3>
+                    <table class="product-list">
+                        <thead>
+                            <tr>
+                                <th>商品信息</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                                <th>小计</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="checkout-right">
+                <div class="checkout-card">
+                    <h3><i class="fas fa-file-text"></i> 订单摘要</h3>
+                    <div class="order-summary">
+                        <div class="summary-row">
+                            <span>商品金额</span>
+                            <span id="summary-subtotal">¥0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>运费</span>
+                            <span id="summary-shipping">¥0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>优惠</span>
+                            <span id="summary-discount">-¥0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>实付金额</span>
+                            <span id="summary-total">¥0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-card">
+                    <h3><i class="fas fa-credit-card"></i> 支付方式</h3>
+                    <div class="payment-methods">
+                        <label class="payment-option selected">
+                            <input type="radio" name="payment" value="alipay" checked>
+                            <i class="fab fa-alipay"></i>
+                            <span>支付宝</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="wechat">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信支付</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checkout-card">
+                    <label class="agreement">
+                        <input type="checkbox" id="agreement" checked>
+                        我已阅读并同意<a href="#">《用户协议》</a>和<a href="#">《隐私政策》</a>
+                    </label>
+                    <button class="submit-order-btn" id="submit-order">提交订单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>版权信息</h3>
+                    <p>学号:24215220235</p>
+                    <p>姓名:梁鸿毅</p>
+                    <p>&copy; 2024 优品商城 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
